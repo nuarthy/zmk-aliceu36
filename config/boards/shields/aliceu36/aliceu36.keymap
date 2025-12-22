@@ -109,25 +109,25 @@
 
         game_layer { //2
             bindings = <
-                &kp P       &kp Q   &kp W           &kp E   &kp R       &kp T               &kp Y               &kp U           &kp I       &kp O
-                &kp LSHFT   &kp A   &kp S           &kp D   &kp F       &kp G               &kp H               &kp J           &kp K       &kp L
-                &kp LCTRL   &kp Z   &kp X           &kp C   &kp V       &kp B               &kp N               &kp M           &kp COMMA   &to QWERTY
-                                    &lt MEDIA ESC   &kp TAB &kp SPACE   &lt NUMBER SPACE    &lt NAV BACKSPACE   &lt FUNC QMARK
+                &kp TAB     &kp Q   &kp W           &kp E       &kp R       &kp T               &kp Y               &kp U           &kp I       &kp O
+                &kp LSHFT   &kp A   &kp S           &kp D       &kp F       &kp G               &kp H               &kp J           &kp K       &kp L
+                &kp LCTRL   &kp Z   &kp X           &kp C       &kp V       &kp B               &kp N               &kp M           &kp COMMA   &kp P
+                                    &lt MEDIA ESC   &kp LALT    &kp SPACE   &lt NUMBER ENTER    &lt NAV BACKSPACE   &lt FUNC QMARK
                 >;
         };
 
         media_layer { //3
             bindings = <
-                &none       &to COLEMAK &to QWERTY  &to GAME    &none    &terminal       &kp C_MUTE      &none       &none       &none
-                &kp LGUI    &kp LCTRL   &kp LALT    &kp LSHFT   &none    &kp C_BRI_UP    &kp C_VOL_UP    &kp C_PP    &none       &none
-                &none       &none       &none       &none       &none    &kp C_BRI_DN    &kp C_VOL_DN    &kp C_PREV  &kp C_NEXT  &none
-                                        &none       &none       &none    &none           &none           &none
+                &none       &to COLEMAK &to QWERTY  &to GAME    &none    &none          &kp C_MUTE      &none       &none       &none
+                &kp LGUI    &kp LCTRL   &kp LALT    &kp LSHFT   &none    &kp C_BRI_UP   &kp C_VOL_UP    &kp C_PP    &none       &none
+                &none       &none       &none       &none       &none    &kp C_BRI_DN   &kp C_VOL_DN    &kp C_PREV  &kp C_NEXT  &none
+                                        &none       &none       &none    &none          &none           &none
             >;
         };
 
         nav_layer { //4
             bindings = <
-                &none       &none       &none       &none       &none       &kp PSCRN       &kp INS         &kp CAPS    &kp BSLH    &kp PIPE
+                &none       &none       &none       &none       &none       &kp PSCRN       &kp INS         &kp CAPS    &caps_word  &terminal
                 &kp LGUI    &kp LCTRL   &kp LALT    &kp LSHFT   &none       &kp LEFT        &kp DOWN        &kp UP      &kp RIGHT   &mkp MB5
                 &none       &none       &none       &none       &none       &kp HOME        &kp PG_DN       &kp PG_UP   &kp END     &mkp MB4
                                         &none       &none       &none       &kp SPACE       &kp BACKSPACE   &kp DELETE
@@ -136,7 +136,7 @@
 
         mouse_layer { //5
             bindings = <
-                &none       &none       &none       &none       &kp ENTER   &kp K_CUT       &kp K_COPY      &kp K_PASTE     &none           &caps_word
+                &none       &none       &none       &none       &kp ENTER   &kp K_CUT       &kp K_COPY      &kp K_PASTE     &none           &none
                 &kp LGUI    &kp LCTRL   &kp LALT    &kp LSHFT   &kp SPACE   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT &mkp MB5
                 &none       &none       &none       &none       &none       &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP    &msc SCRL_RIGHT &mkp MB4
                                         &none       &none       &none       &mkp LCLK       &mkp RCLK       &mkp MCLK 
@@ -145,18 +145,18 @@
 
         number_layer { //6
             bindings = <
-                &kp N1      &kp N2      &kp N3      &kp N4          &kp N5          &soft_off   &none       &none       &bootloader &sys_reset
+                &kp N1      &kp N2      &kp N3      &kp N4          &kp N5          &soft_off   &none       &none       &none       &mo BLUETOOTH
                 &kp N6      &kp N7      &kp N8      &kp N9          &kp N0          &none       &kp LSHFT   &kp LALT    &kp LCTRL   &kp LGUI
-                &kp SEMI    &none       &none       &none           &none           &none       &none       &none       &none       &mo BLUETOOTH   
+                &kp SEMI    &none       &none       &none           &none           &none       &none       &none       &bootloader &mo sys_reset   
                                         &none       &kp LPAR        &kp RPAR        &none       &none       &none
             >;
         };
 
         symbol_layer { //7
             bindings = <
-                &kp EXCL    &kp AT      &kp HASH    &kp DOLLAR      &kp PERCENT     &none       &none       &none       &none       &none
-                &kp CARET   &kp AMPS    &kp ASTRK   &kp MINUS       &kp EQUAL       &none       &kp LSHFT   &kp LALT    &kp LCTRL   &kp LGUI
-                &kp COLON   &kp TILDE   &kp GRAVE   &kp UNDER       &kp PLUS        &none       &none       &none       &none       &none   
+                &kp EXCL    &kp AT      &kp HASH    &kp DOLLAR      &kp PERCENT     &kp COLON   &none       &none       &none       &none
+                &kp CARET   &kp AMPS    &kp ASTRK   &kp MINUS       &kp EQUAL       &kp SEMI    &kp LSHFT   &kp LALT    &kp LCTRL   &kp LGUI
+                &kp PIPE    &kp TILDE   &kp GRAVE   &kp UNDER       &kp PLUS        &kp BSLH    &none       &none       &none       &none   
                                         &none       &kp LBRC        &kp RBRC        &none       &none       &none
             >;
         };
@@ -172,8 +172,8 @@
 
         bluetooth_layer { //9
             bindings = <
-                &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_DISC 0   &bt BT_DISC 1   &bt BT_DISC 2   &bt BT_DISC 3   &bt BT_DISC 4
-                &none           &none           &bt BT_PRV      &bt BT_NXT      &none           &none           &none           &none           &none           &none
+                &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &none           &bt BT_DISC 0   &bt BT_DISC 1   &bt BT_DISC 2   &bt BT_DISC 3   &none
+                &bt BT_SEL 4    &none           &bt BT_PRV      &bt BT_NXT      &none           &bt BT_DISC 4   &none           &none           &none           &none
                 &none           &none           &none           &none           &none           &out OUT_BLE    &out OUT_USB    &bt BT_CLR_ALL  &bt BT_CLR      &none 
                                                 &none           &none           &none           &none           &none           &none
                 >;
